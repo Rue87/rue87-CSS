@@ -1,0 +1,255 @@
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+.profile img {
+
+    display: block;
+    border: 7px solid green;
+    border-radius: 50%;
+}
+.container{
+    max-width: 90.5rem;
+    margin:0 auto;
+    padding: 0 2rem;
+}
+.button{
+    display:inline-block;
+    font:inherit;
+    background:none;
+    color:inherit;
+    padding:0;
+    cursor: pointer;
+}
+.button:focus{
+      outline: 0.5rem auto #4d90fe;
+}
+.visually-hidden{
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.profile{
+    padding: 3rem 0;
+}
+.profile::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.profile-image{
+    float: left;
+    width:calc(30% - 1rem);
+    margin-right:3rem ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image img{
+    border-radius: 50%;
+    border: 5px solid green;
+    vertical-align: middle;
+
+}
+
+.profile-stats[data-v-3f3e1f7e] {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+.post,.followers,.following{
+    margin-right: 2rem;
+}
+.profile-stats li:last-of-type{
+    margin-right: 0;
+}
+
+    
+.profile-bio{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
+}
+.profile-user-settings{
+    margin-bottom: 2rem;
+}
+.profile-user-name{
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+.profile-edit-btn{
+    border: 0.1rem solid #dbdbdb;
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    color: #262626;
+    cursor: pointer;
+    background-color: #fafafa;
+}
+.profile-setting-btn{
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    color: #262626;
+}
+.profile-stats{
+    margin: 3px;
+}
+.profile-stats li{
+    display:flex;
+    flex-direction: row;
+    margin: 10px; ;
+    font-size: 1.6rem;
+
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+    
+ .gallery-item{
+    width: 250px;
+    height: 400px;
+    border:0px solid #fafafa;
+    margin: 1rem;
+    overflow: hidden;
+    transition: 400ms;
+    text-shadow: 2px 2px 4px #000000;
+    position:relative;
+    flex:1 0 22 ;
+    cursor: pointer;
+  }
+  .gallery-image{
+    width: 250px;
+    height: 400px;
+    border:0px solid #fafafa;
+    margin: 1rem;
+    overflow: hidden;
+    transition: 400ms;
+    text-shadow: 2px 2px 4px #000000;
+    position: relative;
+    flex:1 0 22 ;
+    cursor: pointer;
+  }
+   
+  .gallery-image:hover{
+        transform: scale(1.1); 
+                }
+.gallery-item-info{
+    display: none;
+    }
+
+.gallery-item-info li{
+    display: inline-block;
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.gallery-item-info li:first-of-type{
+    margin-right: 1rem;
+}
+.gallery-item-type{
+    width: calc(50%);
+    margin: 1rem;
+    position: relative;
+    cursor: pointer;
+    flex: 1 0 21.0rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    color: white;
+}
+
+@media screen and (min-width: 855px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .profile{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+    }
+    .profile::after{
+        display: none;
+    }
+    .profile-image,
+    .profile-bio,
+    .profile-user-settings,
+    .profile-stats{
+        float: none;
+        width:100%;
+    }
+    .profile-image{
+        width: 6.5rem;
+    }
+    .profile-user-settings{
+        display:flex;
+        text-align: center;
+        justify-content: flex-end;
+    }
+    .profile-edit-btn{
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+        
+    }
+    .profile-edit-btn{
+        margin-left: 0;
+    }
+
+    .profile-stats ul{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .profile-bio{
+        display: flex;
+        text-align: center;
+        justify-content:flex-end;
+        margin-top: 1rem;
+    }
+
+    .gallery-item-type{
+        width: calc(50% - 2rem);
+    }
+}
